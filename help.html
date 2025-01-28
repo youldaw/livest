@@ -59,54 +59,111 @@
 			</header>
 
 			<main class="main">
-				<section class="plan-sec">
-					<div class="container">
-						<div class="title">
-							<h2><span>План</span> обучающих мероприятий «Ли Вест» на 2024 г.</h2>
-						</div>
+				<section class="help-sec">
+                    <div class="container">
+                        <div class="title">
+                            <h2><span>Техническая </span> Поддержка</h2>
+                        </div>
 
-						<div class="plan-table">
-							<table class="table">
-								<thead>
-									<tr>
-										<th>Дата обучения</th>
-										<th>План</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>16 января</td>
-										<td>Вебинар <span>«Обучающие бизнес-программы — ваш план развития и залог успеха вместе с корпорацией “Ли Вест”»</span></td>
-									</tr>
-									<tr>
-										<td>18 января</td>
-										<td>Завершение проекта <span>Активный Партнер</span> (итоги)</td>
-									</tr>
-									<tr>
-										<td>20 января</td>
-										<td>Проект <span>«Бизнес с Ли Вест»</span>. Инструкция по применению</td>
-									</tr>
-									<tr>
-										<td>24-29 января</td>
-										<td>Мастерская <span>«Лузарина -2024 г.»</span></td>
-									</tr>
-									<tr>
-										<td>5-9, 12 и 13 февраля</td>
-										<td><span>«Умный старт»</span>. 20 поток</td>
-									</tr>
-									<tr>
-										<td>17 февраля</td>
-										<td>Онлайн-мероприятие для г. Нижний Новгород</td>
-									</tr>
-									<tr>
-										<td>26 февраля – 1 марта</td>
-										<td><span>Активный Партнер</span> - 5. 1 этап</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</section>
+                        <div class="help-text">
+                            <p>Иногда случается так, что что-то работает неправильно. Например: вы не получили письмо со ссылкой на онлайн-мероприятие, не получается оформить заказ в интернет-магазине, не можете выполнить вход в Личный кабинет Партнера, у вас изменился адрес электронной почты или телефон и т.д. Для решения этих вопросов и не только, мы придумали форму заявки, что расположена ниже. Просто заполните ее и отправьте, она попадет в систему поддержки и будет отработана. О решении вашего вопроса мы сообщим вам по указанному телефону или электронной почте.</p>
+                            <p>Обращаем ваше внимание, что отдел технической поддержки работает с понедельника по пятницу <span>с 06:00 до 14:00 по московскому времени, СБ-ВС выходные.</span> Каждая заявка будет обработана согласно очереди. Если у вас возник срочный и безотлагательный вопрос, рекомендуем позвонить нам по прямому номеру телефона техподдержки: <a href="tel:+7 383 218 86 79">+7 383 218 86 79</a>.</p>
+                        </div>
+
+                        <div class="help-block">
+                            <div class="help-title">
+                                <img src="images/q-icon.svg" alt="">
+                                <h3>Для решения вашего вопроса, пожалуйста заполните форму</h3>
+                            </div>
+
+                            <form action="#!" id="form-help">
+                                <div class="row form-rov">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="name" placeholder="Ваше имя">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="surname" placeholder="Ваша фамилия">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="id-client" placeholder="Ваш ID партнера/клиента">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="email" name="email" placeholder="Ваш Email">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="tel" name="phone" placeholder="Ваше телефон">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-inner">
+                                    <div class="form-title">
+                                        <h4>Расскажите, чем мы можем вам помочь?</h4>
+                                    </div>
+
+                                    <div class="select-div">
+                                        <select>
+                                            <option value="hide">Регистрация</option>
+                                            <option value="Вебинар">Вебинар</option>
+                                            <option value="Интернет-магазин">Интернет-магазин</option>
+                                            <option value="Онлайн-курс">Онлайн-курс</option>
+                                        </select>
+                                    </div>
+
+									<div class="checks-box">
+										<div class="in-title">
+											<span>Пожалуйста уточните, в чём конкретно вопрос:</span>
+										</div>
+
+										<label class="check-label">
+											<input type="checkbox" name="" class="d-none" checked="checked">
+											<span class="indicator"></span>
+											<span class="text">Я заполнил анкету, но не получил письмо с моим персональным ID (номером Партнера или Клиента)</span>
+										</label>
+
+										<label class="check-label">
+											<input type="checkbox" name="" class="d-none">
+											<span class="indicator"></span>
+											<span class="text">Я подтверждаю свой email, но на странице ошибка</span>
+										</label>
+
+										<label class="check-label">
+											<input type="checkbox" name="" class="d-none">
+											<span class="indicator"></span>
+											<span class="text">Я заполнил форму регистрации с ошибкой, повторная регистрация не возможна (браузер показывает страницу с ошибкой или пустой экран)</span>
+										</label>
+
+										<div class="check-message">
+											<label class="check-label">
+												<input type="checkbox" name="" class="d-none">
+												<span class="indicator"></span>
+												<span class="text">Нет моего варианта, опишу проблему ниже</span>
+											</label>
+
+											<textarea placeholder="Сообщение" class="form-message"></textarea>
+										</div>
+									</div>
+
+									<div class="form-aggree">
+										<p>Нажимая на кнопку «Отправить Заявку», вы даёте согласие на обработку своих <a href="https://liwest.ru/upload/download/agreements/politica.pdf">персональных данных</a> и соглашаетесь с <a href="https://lk.liwest.ru/wp-content/uploads/2020/11/partner_contract_301120.pdf">Партнерским соглашением</a> корпорации «Ли Вест».</p>
+									</div>
+									<div class="form-btn">
+										<button type="submit" class="send green-btn">Отправить</button>
+									</div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
 			</main>
 
 			<footer class="footer">

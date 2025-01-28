@@ -8,6 +8,21 @@ $(function () {
         $('.navbar').toggleClass('active');
     });
 
+
+    // help form check message
+    if ($('.check-message input').prop('checked')) {
+        $('form-message').show();
+      } else {
+        $('.form-message').hide();
+    }
+    $('.check-message input').change(function() {
+        if ($(this).prop('checked')) {
+          $('.form-message').show(); // checkbox belgilansa, textarea ko'rinsin
+        } else {
+          $('.form-message').hide(); // checkbox bekor qilinsa, textarea yashirin bo'lsin
+        }
+    });
+
     // var swiper3 = new Swiper(".quality-slide-in", {
     //     slidesPerView: 1,
     //     spaceBetween: 10,
@@ -33,6 +48,58 @@ $(function () {
     //         },
     //     },
     // });
+
+
+    $('select').each(function(){
+        var $this = $(this), numberOfOptions = $(this).children('option').length;
+      
+        $this.addClass('select-hidden'); 
+        $this.wrap('<div class="select"></div>');
+        $this.after('<div class="select-styled"></div>');
+    
+        var $styledSelect = $this.next('div.select-styled');
+        $styledSelect.text($this.children('option').eq(0).text());
+      
+        var $list = $('<ul />', {
+            'class': 'select-options'
+        }).insertAfter($styledSelect);
+      
+        for (var i = 0; i < numberOfOptions; i++) {
+            $('<li />', {
+                text: $this.children('option').eq(i).text(),
+                rel: $this.children('option').eq(i).val()
+            }).appendTo($list);
+            if ($this.children('option').eq(i).is(':selected')){
+              $('li[rel="' + $this.children('option').eq(i).val() + '"]').addClass('is-selected')
+            }
+        }
+      
+        var $listItems = $list.children('li');
+      
+        $styledSelect.click(function(e) {
+            e.stopPropagation();
+            $('div.select-styled.active').not(this).each(function(){
+                $(this).removeClass('active').next('ul.select-options').hide();
+            });
+            $(this).toggleClass('active').next('ul.select-options').toggle();
+        });
+      
+        $listItems.click(function(e) {
+            e.stopPropagation();
+            $styledSelect.text($(this).text()).removeClass('active');
+            $this.val($(this).attr('rel'));
+          $list.find('li.is-selected').removeClass('is-selected');
+          $list.find('li[rel="' + $(this).attr('rel') + '"]').addClass('is-selected');
+            $list.hide();
+            //console.log($this.val());
+        });
+      
+        $(document).click(function() {
+            $styledSelect.removeClass('active');
+            $list.hide();
+        });
+    
+    });
 
 });
 
