@@ -4,6 +4,8 @@
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="libs/bootstrap5/bootstrap.min.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" media="screen">
+		<!-- Flatpickr CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 		<link rel="stylesheet icon" type="text/css" href="css/style.css" media="screen">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="UTF-8">
@@ -107,9 +109,9 @@
 						</div>
 	
 						<div class="main-flex">
-							<div class="circle">
+							<a href="#!" class="circle">
 								<img src="images/bublik-anim.svg" alt="">
-							</div>
+							</a>
 	
 							<div class="eco-block">
 								<div class="eco-item left">
@@ -330,6 +332,50 @@
 									</div>
 								</div>
 							</div>
+
+							<div class="col-lg-8">
+								<div class="calendar-box">
+									<div class="box-left">
+										<div class="calendar-shown">
+											<div class="calendar-month">Август</div>
+											<div class="calendar-date">
+												<span>
+													<svg width="14" height="29" viewBox="0 0 14 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.9609 1.44629L2.43697 11.9702C1.17995 13.2272 1.17995 15.2653 2.43696 16.5223L12.9609 27.0463" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												</span>
+												<p>21</p>
+												<span>
+													<svg width="14" height="29" viewBox="0 0 14 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M1.16094 1.44629L11.6849 11.9702C12.9419 13.2272 12.9419 15.2653 11.6849 16.5223L1.16094 27.0463" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												</span>
+											</div>
+											<div class="calendar-year">2023</div>
+										</div>
+										<div class="calendar-info">
+											<div class="calendar-info-date">20.08.2023 – 22.08.2023</div>
+											<div class="calendar-info-title">Другое интересное событие</div>
+											<div class="calendar-info-text">
+												<p>Лишь явные признаки победы институционализации представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть превращены в посмешище, хотя само их существование приносит несомненную пользу обществу.</p>
+											</div>
+											<div class="calendar-info-link">
+												<a href="#!">Подробнее</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="calendar-wrapper">
+										<input type="text" id="calendar" class="calendar-input d-none" placeholder="Выберите дату">
+
+										<div class="calendar-end">
+											<span>События за период: 20 - 22 Август 2023</span>
+											<button class="ok">ok</button>
+										</div>
+									</div>
+								</div>
+							
+							</div>
 						</div>
 					</div>
 				</section>
@@ -451,9 +497,24 @@
 		</div>
 
 		<script src="js/jquery-3.7.0.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 		<script src="libs/bootstrap5/popper.js"></script>
 		<script src="libs/bootstrap5/bootstrap.min.js"></script>
 		<script src="js/swiper-bundle.min.js"></script>
 		<script src="js/script.js"></script>
+
+		<script>
+			$(document).ready(function(){
+				$("#calendar").flatpickr({
+					inline: true,
+					mode: "range",
+					dateFormat: "d.m.Y",
+					defaultDate: ["20.08.2023", "22.08.2023"],
+					locale: {
+						firstDayOfWeek: 1
+					}
+				});
+			});
+		</script>
 	</body>
 </html>
