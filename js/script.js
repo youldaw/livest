@@ -17,10 +17,52 @@ $(function () {
     }
     $('.check-message input').change(function() {
         if ($(this).prop('checked')) {
-          $('.form-message').show(); // checkbox belgilansa, textarea ko'rinsin
+          $('.form-message').show();
         } else {
-          $('.form-message').hide(); // checkbox bekor qilinsa, textarea yashirin bo'lsin
+          $('.form-message').hide();
         }
+    });
+
+
+    var swiper1 = new Swiper(".main-slide", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        autoplay:{
+            delay: 3000,
+        },
+        speed: 1000,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+
+
+    var swiper2 = new Swiper(".mn-slide", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        speed: 1000,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        },
     });
 
     // var swiper3 = new Swiper(".quality-slide-in", {
