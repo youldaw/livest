@@ -2207,10 +2207,249 @@ button.green-btn {
 /*  */
 .about-geography {
 	padding: 140px 0 55px;
+	position: relative;
+	background-image: url('../images/about-geography-bg.png');
+	background-repeat: no-repeat;
+	background-size: 117%;
+	background-position: -180px 75px;
 }
 .about-geography .title {
 	margin-bottom: 150px;
 }
+.ag-col {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	gap: 40px;
+}
+.ag-item span {
+	min-width: 250px;
+	max-width: 250px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 0 23px;
+	box-shadow: -15px 14px 20.1px 0px #004FEA1A;
+	backdrop-filter: blur(6.982435703277588px);
+	padding: 11px 10px;
+	border-radius: 300px;
+}
+.ag-item img {
+	height: 32px;
+}
+
+.ag-text {
+	margin: 70px 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	gap: 30px 50px;
+}
+.ag-text-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 0 24px;
+}
+.ag-text-item span {
+	font-family: 'Rajdhani', serif;
+	font-size: 77.45px;
+	font-weight: 600;
+	line-height: 69.71px;
+	color: #176BC9;
+}
+.ag-text-item p {
+	font-size: 26px;
+	font-weight: 400;
+	line-height: 41.6px;
+	color: #001855;
+}
+.al-btn .green-btn,
+.ag-btn .green-btn {
+	gap: 0 20px;
+}
+
+/* about Ли Вест */
+.about-livest {
+	margin: 140px 0 160px;
+	position: relative;
+}
+.al-img {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 55%;
+}
+.al-block .title {
+	margin-bottom: 50px;
+}
+.al-block h3 {
+	font-size: 36px;
+	font-weight: 600;
+	line-height: 46.8px;
+	color: #034EA2;
+	margin-bottom: 40px;
+}
+.al-block p {
+	font-size: 26px;
+	font-weight: 400;
+	line-height: 33.8px;
+	color: #001855;
+	max-width: 450px;
+}
+
+.al-block .al-btn {
+	margin-top: 85px;
+}
+
+/* about-partner */
+.about-partner {
+	padding-top: 130px;
+}
+.about-partner .title {
+	text-align: center;
+	margin-bottom: 90px;
+}
+
+.partner-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5px 0;
+	text-align: center;
+}
+.partner-item p {
+	font-size: 26px;
+	font-weight: 500;
+	line-height: 39px;
+	color: #034EA2;
+	max-width: 235px;
+}
+
+.partner-box {
+	position: relative;
+	padding: 0 100px 40px;
+}
+.partner-slide {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.sert-box .sert-button-prev,
+.sert-box .sert-button-next,
+.partner-box .swiper-button-prev,
+.partner-box .swiper-button-next {
+	background: linear-gradient(134.61deg, #129573 26.12%, #87E759 88.13%);
+	min-width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	top: 40%;
+}
+.sert-box .sert-button-prev,
+.partner-box .swiper-button-prev {
+	left: 20px;
+}
+.sert-box .sert-button-next,
+.partner-box .swiper-button-next {
+	right: 20px;
+}
+
+/* Награды и благодарности */
+
+.about-sert {
+	padding-top: 140px;
+}
+.about-sert .title {
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+.sert-box {
+	position: relative;
+	padding: 0 100px 40px;
+}
+.sert-slide {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.sert-item img {
+	width: 100%;
+	border-radius: 10px;
+}
+.sert-item {
+	padding: 0 40px;
+}
+
+.sert-button-next,
+.sert-button-prev {
+    position: absolute;
+    top: 50%;
+    width: calc(var(--swiper-navigation-size)/ 44 * 27);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--swiper-navigation-color,var(--swiper-theme-color));
+}
+
+.about-end {
+	padding-top: 140px;
+	position: relative;
+}
+.about-end .title {
+	text-align: center;
+	margin-bottom: 44px;
+}
+.ae-text p {
+	font-size: 26px;
+	font-weight: 400;
+	line-height: 41.6px;
+	text-align: center;
+	color: #001855;
+	margin-bottom: 35px;
+	max-width: 1079px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.ae-btn {
+	text-align: center;
+	margin-top: 32px;
+}
+.ae-btn .green-btn {
+	gap: 0 20px;
+}
+.ae-block {
+	padding: 112px 0 80px;
+	position: relative;
+}
+.ae-block .leaf-right {
+	position: absolute;
+	right: -75px;
+	top: -32px;
+}
+.ae-block .leaf-left {
+	position: absolute;
+	bottom: 10px;
+	left: -70px;
+}
+/* geo-initial-state */
+.geo-sec {
+	padding: 42px 0 120px;
+	position: relative;
+}
+
+
+
+
+
+
 
 
 

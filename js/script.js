@@ -53,7 +53,7 @@ $(function () {
             prevEl: ".swiper-button-prev",
         },
         breakpoints: {
-            640: {
+            320: {
                 slidesPerView: 1,
             },
             768: {
@@ -61,6 +61,53 @@ $(function () {
             },
             1024: {
                 slidesPerView: 3,
+            },
+        },
+    });
+
+
+    var swiper3 = new Swiper(".partner-slide", {
+        slidesPerView: 4,
+        spaceBetween: 10,
+        loop: true,
+        speed: 1000,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4,
+            },
+        },
+    });
+
+
+
+    var swiper4 = new Swiper(".sert-slide", {
+        slidesPerView: 4,
+        spaceBetween: 10,
+        loop: true,
+        speed: 1000,
+        navigation: {
+            nextEl: ".sert-button-next",
+            prevEl: ".sert-button-prev",
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4,
             },
         },
     });
@@ -79,7 +126,7 @@ $(function () {
     //         prevEl: ".swiper-button-prev",
     //     },
     //     breakpoints: {
-    //         640: {
+    //         320: {
     //             slidesPerView: 1,
     //         },
     //         768: {
