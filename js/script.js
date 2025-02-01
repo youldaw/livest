@@ -143,6 +143,37 @@ $(function () {
     
     });
 
+
+    // about video
+    var $videoWrapper = $('.video-wrapper');
+    var $video = $videoWrapper.find('video').first();
+
+    if ($video.length) {
+        renderVideoPlayButton();
+    }
+
+    function renderVideoPlayButton() {
+        formatVideoPlayButton();
+        $video.addClass('has-media-controls-hidden');
+
+        var $videoPlayButton = $('.video-overlay-play-button');
+        $videoPlayButton.on('click', hideVideoPlayButton);
+    }
+
+    function formatVideoPlayButton() {
+        $videoWrapper.append(
+            '<svg class="video-overlay-play-button" viewBox="0 0 200 200" alt="Play video">' +
+            '<polygon points="70, 55 70, 145 145, 100" fill="#fff"/>' +
+            '</svg>'
+        );
+    }
+
+    function hideVideoPlayButton() {
+        $video[0].play();
+        $('.video-overlay-play-button').addClass('is-hidden');
+        $video.removeClass('has-media-controls-hidden').attr('controls', 'controls');
+    }
+
 });
 
 
