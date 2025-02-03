@@ -1329,6 +1329,7 @@ h3 {
 .accordion-button:not(.collapsed)::after {
 	background-image: url('../images/accordion-arrow.svg');
 }
+.accordion-button:not(.collapsed) span,
 .accordion-button:not(.collapsed) {
 	background-color: transparent;
 	color: #2A8146;
@@ -2959,6 +2960,9 @@ button.green-btn {
 .faq-sec {
 	padding: 50px 0 110px;
 	position: relative;
+	background-image: url('../images/contacts-bg.png');
+	background-repeat: no-repeat;
+	background-position: top;
 }
 .faq-sec .title {
 	margin-bottom: 66px;
@@ -2980,6 +2984,258 @@ button.green-btn {
 	display: inline;
 	color: #034EA2;
 }
+
+.faq-title span {
+	font-size: 28px;
+	font-weight: 500;
+	line-height: 33.6px;
+	color: #001855;
+	padding: 11px 28px;
+	border-radius: 100px;
+	background: rgba(171, 225, 250, 0.2);
+	margin-bottom: 35px;
+}
+.item-title {
+	margin-bottom: 27px;
+	text-align: center;
+}
+.item-title p {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 28.8px;
+	color: rgba(0, 24, 85, .6);
+}
+.faq-block .accordion {
+	align-items: unset;
+	gap: 15px 0;
+}
+.faq-block .accordion-item {
+	border: none;
+	padding-left: 10px;
+}
+.faq-block .accordion-button {
+	display: flex;
+	align-items: center;
+	gap: 0 25px;
+	padding: 0;
+	margin: 0;
+}
+.faq-block .accordion-body {
+	padding-left: 85px;
+}
+.faq-block .accordion-button span {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 24px;
+	color: #034EA2;
+}
+.faq-block .accordion-button:not(.collapsed) span {
+	color: #2A8146;
+}
+.faq-item {
+	margin-bottom: 50px;
+}
+.faq-block:last-child,
+.faq-item:last-child {
+	margin-bottom: 0;
+}
+ol {
+	margin-bottom: 0;
+}
+.faq-in a,
+.faq-in ol,
+.faq-in p {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 23.4px;
+	color: #001855;
+}
+.faq-in {
+	margin-bottom: 30px;
+}
+.faq-in a {
+	color: #034EA2;
+}
+.faq-in a:hover {
+	text-decoration: underline;
+}
+.faq-block {
+	margin-bottom: 87px;
+}
+
+/* tcm */
+.tcm-sec {
+	padding: 175px 0 185px;
+	background-image: url('../images/tcm-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.tcm-main .title {
+	text-align: center;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.tcm-main .title h1 {
+	text-shadow: 0px 4px 28.3px 0px #0066FF40;
+	font-size: 56px;
+	font-weight: 600;
+	line-height: 78.4px;
+	color: #fff;
+	margin-bottom: 60px;
+}
+.tcm-main .title p {
+	font-size: 28px;
+	font-weight: 400;
+	line-height: 40.6px;
+	color: #fff;
+}
+.tcm-two {
+	padding: 25px 0 96px;
+}
+.tcm-block {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 722px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	padding: 0 130px;
+}
+.tcm-block img {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.tcm-block.right .tcm-in {
+	margin-left: 0;
+	margin-right: auto;
+	max-width: 570px;
+}
+.tcm-in {
+	margin-left: auto;
+	max-width: 500px;
+	width: 100%;
+	position: relative;
+}
+.tcm-in .tcm-text p {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 26.1px;
+	color: #001855;
+	margin-bottom: 22px;
+}
+.tcm-in .tcm-text p:last-child {
+	margin-bottom: 0;
+}
+.tcm-in .title {
+	margin-bottom: 22px;
+}
+
+
+.tcm-method {
+	padding: 100px 0 160px;
+	position: relative;
+	background-image: url('../images/tcm-bg-two.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.method-text {
+	max-width: 500px;
+	margin-left: auto;
+}
+.method-text .title {
+	margin-bottom: 22px;
+}
+.method-text .title h2 {
+	line-height: 56px;
+}
+.method-text p {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 26.1px;
+	color: #001855;
+	margin-bottom: 24px;
+}
+.method-text p:last-child {
+	margin-bottom: 0;
+}
+
+
+.tcm-info-sec {
+	padding: 140px 0 125px;
+}
+.tcm-info {
+	padding: 125px 0 135px 220px;
+	position: relative;
+}
+.tcm-info .tcm-border {
+    position: absolute;
+    left: -41%;
+    top: 0;
+    height: 100%;
+    width: 200%;
+}
+.tcm-info .title {
+	margin-bottom: 60px;
+}
+.tcm-info-block {
+	max-width: 800px;
+	width: 100%;
+	text-align: center;
+}
+.tcm-info-text p {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 29px;
+	color: #001855;
+	margin-bottom: 30px;
+}
+.tcm-info-text p:last-child {
+	margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
