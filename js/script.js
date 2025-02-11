@@ -5,7 +5,17 @@ $(function () {
     $('.menu-opener').on('click', function (e) {
         e.preventDefault();
         $(this).toggleClass('active');
-        $('.navbar').toggleClass('active');
+        $('.navbar-collapse').toggleClass('active');
+    });
+
+    $('.li-drop .drop-opener').on('click', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $(this).parent('.li-drop').toggleClass('active');
+    });
+    $('.li-drop ').on('click', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
     });
 
 
