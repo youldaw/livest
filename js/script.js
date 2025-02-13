@@ -34,6 +34,34 @@ $(function () {
     });
 
 
+    $('.geo-in .geo-btn').on('click', function (e) {
+        e.preventDefault();
+        $('.geo-in').removeClass('active');
+        $(this).parent().toggleClass('active');
+    });
+    $(document).mouseup(function (e) {
+        var div = $(".geo-in, .geo-card");
+        if (!div.is(e.target)
+            && div.has(e.target).length === 0) {
+            div.removeClass('active');
+        }
+    });
+    $('.mini-card').on('click', function (e) {
+        e.preventDefault();
+        $(this).addClass('hide');
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
+    });
+
+
+    $('.geo-item').on('click', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $(this).parent().toggleClass('active');
+        $(this).siblings().removeClass('active');
+    });
+
+
     var swiper1 = new Swiper(".main-slide", {
         slidesPerView: 1,
         spaceBetween: 10,
@@ -87,7 +115,7 @@ $(function () {
         },
         breakpoints: {
             320: {
-                slidesPerView: 2,
+                slidesPerView: 1,
             },
             768: {
                 slidesPerView: 3,
@@ -111,7 +139,7 @@ $(function () {
         },
         breakpoints: {
             320: {
-                slidesPerView: 2,
+                slidesPerView: 1,
             },
             768: {
                 slidesPerView: 3,
