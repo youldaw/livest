@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="libs/bootstrap5/bootstrap.min.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" media="screen">
+		<link rel="stylesheet icon" type="text/css" href="css/style.css" media="screen">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<title>Title</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="container">
+					<nav class="navbar navbar-expand-lg">
+						<a class="navbar-brand" href="#!">
+							<img src="images/logo.svg" alt="" class="pc">
+							<img src="images/logo-sm.svg" alt="" class="mob">
+						</a>
+
+						<div class="mob">
+							<button class="menu-opener">
+								<span class="one"></span>
+								<span class="two"></span>
+								<span class="three"></span>
+							</button>
+						</div>
+
+						<div class="navbar-collapse">
+							<div class="mob">
+								<a href="#!" class="mob-logo"><img src="images/mob-menu-logo.svg" alt=""></a>
+							</div>
+							<div class="head-top">
+								<div class="head-flex">
+									<div class="head-lk mob">
+										<a class="lk-link" href="#!">
+											<img src="images/profile-icon.svg" alt="">
+											<span>ЛК</span>
+										</a>
+									</div>
+									<div class="head-lang">
+										<a href="#!">EN</a>
+										<a href="#!" class="active">RU</a>
+									</div>
+								</div>
+								<div class="head-contact">
+									<a href="tel:8 800 700 78 33">8 800 700 78 33</a>
+									<a href="mailto:liwest@liwest.ru">liwest@liwest.ru</a>
+								</div>
+							</div>
+
+							<ul class="navbar-nav">
+								<li class="nav-item">
+									<a class="nav-link" href="#!">Магазин</a>
+								</li>
+
+								<li class="nav-item">
+									<a class="nav-link" href="#!">О нас</a>
+								</li>
+								
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="business-drop" role="button"
+										data-bs-toggle="dropdown" aria-expanded="false">
+										Бизнес с Ли Вест
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="business-drop">
+										<li>
+											<a class="dropdown-item" href="#!">
+												<span class="icon"><img src="images/nav-link-business-icon1.svg" alt=""></span>
+												<span class="text">Стать партнером</span>
+											</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#!">
+												<span class="icon"><img src="images/nav-link-business-icon2.svg" alt=""></span>
+												<span class="text">Обучение</span>
+											</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#!">
+												<span class="icon"><img src="images/nav-link-business-icon3.svg" alt=""></span>
+												<span class="text">Маркетинг план</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="project-drop" role="button"
+										data-bs-toggle="dropdown" aria-expanded="false">
+										Проекты
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="project-drop">
+										<li>
+											<a class="dropdown-item" href="#!">
+												<span class="icon"><img src="images/nav-link-project-icon1.svg" alt=""></span>
+												<span class="text">Медицинский центр</span>
+											</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#!">
+												<span class="icon"><img src="images/nav-link-project-icon2.svg" alt=""></span>
+												<span class="text">Общество врачей ТКМ</span>
+											</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#!">
+												<span class="icon"><img src="images/nav-link-project-icon3.svg" alt=""></span>
+												<span class="text">Центр цигун</span>
+											</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#!">
+												<span class="icon"><img src="images/nav-link-project-icon4.svg" alt=""></span>
+												<span class="text">СИИМЕД</span>
+											</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#!">
+												<span class="icon"><img src="images/nav-link-project-icon5.svg" alt=""></span>
+												<span class="text">Лузарина</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="shop-drop" role="button"
+										data-bs-toggle="dropdown" aria-expanded="false">
+										Где купить
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="shop-drop">
+										<li>
+											<a class="dropdown-item" href="#!">
+												<span class="icon"><img src="images/nav-link-shop-icon1.svg" alt=""></span>
+												<span class="text">Интернет магазин</span>
+											</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#!">
+												<span class="icon"><img src="images/nav-link-shop-icon2.svg" alt=""></span>
+												<span class="text">Каталог продукции </span>
+											</a>
+										</li>
+									</ul>
+								</li>
+
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="faq-drop" role="button"
+										data-bs-toggle="dropdown" aria-expanded="false">
+										Поддержка
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="faq-drop">
+										<li>
+											<a class="dropdown-item" href="#!">
+												<span class="icon"><img src="images/nav-link-business-icon2.svg" alt=""></span>
+												<span class="text">Техподдержка</span>
+											</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#!">
+												<span class="icon"><img src="images/nav-link-shop-icon2.svg" alt=""></span>
+												<span class="text">FAQ</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+
+								<li class="nav-item pc">
+									<a class="nav-link" href="#!"><img src="images/profile-icon.svg" alt=""> ЛК</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</header>
+
+			<main class="main">
+				<section class="sport-sec">
+					<div class="container">
+						<div class="sport-body">
+							<h1>Побеждать, <br>сохраняя здоровье</h1>
+							<p>Средства и методы китайской медицины гармонично встроены в классические схемы медико-биологического сопровождения спортсменов.</p>
+							<div class="sport-body-btn">
+								<a href="#!" class="border-btn">
+									<span>Узнать подробности</span>
+									<svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.15956 13.2204L7.09766 7.28233L1.15956 1.34424" stroke="white" stroke-width="1.78143" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<footer class="footer">
+				<img src="images/footer-left-img.svg" alt="" class="ftr-left-bg">
+				<img src="images/footer-right-img.png" alt="" class="ftr-right-bg">
+				<img src="images/footer-blur-bg.png" alt="" class="ftr-blur-bg">
+
+				<div class="container">
+					<div class="ftr-top">
+						<div class="ftr-logo">
+							<a href="index.html"><img src="images/footer-logo.svg" alt=""></a>
+						</div>
+						<div class="ftr-top-item">
+							<p><span></span> Режим работы</p>
+							<div class="ftr-grafik">
+								<img src="images/ftr-grafik-icon.svg" alt="">
+								<div class="grafik-block">
+									<div class="grafik-text">
+										<span>Пн-Пт</span>
+										<span>6:00 – 14:00 (МСК)</span>
+									</div>
+									<div class="grafik-text">
+										<span>Сб</span>
+										<span>6:00 – 12:00 (МСК)</span>
+									</div>
+									<div class="grafik-text">
+										<span>Вс</span>
+										<span>выходной</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="ftr-top-item">
+							<p><span></span> Центральный офис</p>
+							<div class="ftr-grafik">
+								<img src="images/ftr-grafik-icon2.svg" alt="">
+								<div class="grafik-block">
+									<p>Российская Федерация <br> г. Новосибирск <br>ул. Ермака, 3</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="ftr-top-item">
+							<p><span></span> Бесплатная линия по рф</p>
+							<div class="ftr-contact">
+								<p>
+									<img src="images/tel.svg" alt="">
+									<a href="tel:8 (800) 700 78 33">8 (800) 700 78 33</a>
+								</p>
+								<p>
+									<img src="images/mail.svg" alt="">
+									<a href="mailto:liwest@liwest.ru">liwest@liwest.ru</a>
+								</p>
+								<p>
+									<img src="images/globus-icon.svg" alt="">
+									<a href="#!">Контактная информация <br>по департаментам</a>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="ftr-block pc">
+						<span class="one">ИНФОРМАЦИЯ</span>
+						<span class="two">О КОРПОРАЦИИ</span>
+						<span class="three">НАШИ ПРОЕКТЫ</span>
+
+						<div class="ftr-socials">
+							<a href="#!"><img src="images/vkontakte.svg" alt=""></a>
+							<a href="#!"><img src="images/telegram.svg" alt=""></a>
+							<a href="#!"><img src="images/youtube.svg" alt=""></a>
+						</div>
+					</div>
+
+					<div class="ftr-box">
+						<div class="ftr-col one">
+							<div class="mob">
+								<div class="mob-title">ИНФОРМАЦИЯ</div>
+							</div>
+							<div class="ftr-menu">
+								<a href="#!">Техническая поддержка</a>
+								<a href="#!">Интерактивная библиотека</a>
+								<a href="#!">План обучающих мероприятий на 2023 г.</a>
+								<a href="#!">Онлайн-диагностика организма</a>
+								<a href="#!">Вопрос — ответ</a>
+								<a href="#!">Сервисные центры</a>
+							</div>
+						</div>
+
+						<div class="ftr-col two">
+							<div class="mob">
+								<div class="mob-title">О КОРПОРАЦИИ</div>
+							</div>
+							<div class="ftr-menu">
+								<a href="#!">Цели и миссия «Ли Вест»</a>
+								<a href="#!">История и события</a>
+								<a href="#!">«Ли Вест» в спорте</a>
+								<a href="#!">Контактная информация</a>
+								<a href="#!">Вакансии</a>
+								<a href="#!">Данные о результатах СОУТ</a>
+							</div>
+						</div>
+
+						<div class="ftr-col three">
+							<div class="mob">
+								<div class="mob-title">НАШИ ПРОЕКТЫ</div>
+							</div>
+							<div class="ftr-menu">
+								<a href="#!">Медицинский центр «Ли Вест»</a>
+								<a href="#!">Усадьба «Лузарина»</a>
+								<a href="#!">Сибирский институт интегративной медицины «Ли Вест»</a>
+								<a href="#!">Российское общество врачей традиционной китайской медицины</a>
+								<a href="#!">Центр «Цигун» в Новосибирске</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="mob">
+						<div class="ftr-socials">
+							<a href="#!"><img src="images/vkontakte.svg" alt=""></a>
+							<a href="#!"><img src="images/telegram.svg" alt=""></a>
+							<a href="#!"><img src="images/youtube.svg" alt=""></a>
+						</div>
+					</div>
+
+					<div class="ftr-end">
+						<span>© Все права защищены 2023</span>
+						<p>Официальный интернет-сайт корпорации «Ли Вест»</p>
+						<a href="#!">Политика конфиденциальности и обработки данных</a>
+					</div>
+				</div>
+			</footer> 
+		</div>
+
+		<script src="js/jquery-3.7.0.min.js"></script>
+		<script src="libs/bootstrap5/popper.js"></script>
+		<script src="libs/bootstrap5/bootstrap.min.js"></script>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>

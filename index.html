@@ -639,6 +639,7 @@
 
 		<script src="js/jquery-3.7.0.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/l10n/ru.js"></script>
 		<script src="libs/bootstrap5/popper.js"></script>
 		<script src="libs/bootstrap5/bootstrap.min.js"></script>
 		<script src="js/swiper-bundle.min.js"></script>
@@ -651,18 +652,15 @@
 					mode: "range",
 					dateFormat: "d.m.Y",
 					defaultDate: ["20.08.2023", "22.08.2023"],
-					locale: {
-						firstDayOfWeek: 1
-					}
+					locale: "ru" // Rus
 				});
+
 
 				$("#calendar-mob").flatpickr({
 					mode: "range",
 					dateFormat: "d.m.Y",
 					defaultDate: ["20.08.2023", "22.08.2023"],
-					locale: {
-						firstDayOfWeek: 1
-					}
+					locale: "ru" // Rus
 				});
 			});
 		</script>

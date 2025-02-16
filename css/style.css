@@ -4116,7 +4116,13 @@ footer .container {
   display: none;
 }
 
-
+/* sport */
+.sport-sec {
+	padding: 110px 0;
+	background-image: url('../images/sport-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
 
 
