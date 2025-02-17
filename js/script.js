@@ -54,12 +54,46 @@ $(function () {
     });
 
 
-    $('.geo-item').on('click', function (e) {
-        e.preventDefault();
-        $(this).toggleClass('active');
-        $(this).parent().toggleClass('active');
-        $(this).siblings().removeClass('active');
+    function mobileTabDropdown() {
+        $('.geo-item').on('click', function (e) {
+            e.preventDefault();
+
+            let parent = $(this).closest('.geo-left');
+
+            if (!parent.hasClass('active')) {
+                parent.addClass('active');
+            } else {
+                // Faqatgina yangi element tanlanganda yangilash
+                $('.geo-item').removeClass('active');
+                $(this).addClass('active');
+                parent.removeClass('active');
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        if ($(window).width() < 576) {
+            mobileTabDropdown();
+        }
+
+        $(window).resize(function () {
+            if ($(window).width() < 576) {
+                mobileTabDropdown();
+            } else {
+                $('.geo-item').off();
+            }
+        });
+
+        // Sahifada boshqa joy bosilganda geo-left yopilishi
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('.geo-left').length) {
+                $('.geo-left').removeClass('active');
+                $('.geo-item').removeClass('active');
+            }
+        });
     });
+
+
 
 
     var swiper1 = new Swiper(".main-slide", {
@@ -159,6 +193,30 @@ $(function () {
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
+        },
+    });
+
+
+    var swiper6 = new Swiper(".sport-slide", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        speed: 1000,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+
+    var swiper7 = new Swiper(".product-slide", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        speed: 1000,
+        navigation: {
+            nextEl: ".pro-button-next",
+            prevEl: ".pro-button-prev",
         },
     });
 
