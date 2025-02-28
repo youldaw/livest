@@ -1,11 +1,29 @@
 $(function () {
 
-    // $('input[name=phone]').mask('+7 (999) 999-99-99');
+
+    $(".nav-item.dropdown").hover(
+        function () {
+            $(this).find(".nav-link").addClass("active");
+            $(this).find(".dropdown-menu").stop(true, true).fadeIn(200);
+        },
+        function () {
+            $(this).find(".nav-link").removeClass("active");
+            $(this).find(".dropdown-menu").stop(true, true).fadeOut(200);
+        }
+    );
+
+
+    $('.head-lang a').on('click', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $(this).siblings().removeClass('active');
+    });
 
     $('.menu-opener').on('click', function (e) {
         e.preventDefault();
         $(this).toggleClass('active');
         $('.navbar-collapse').toggleClass('active');
+        $('body').toggleClass('no-scroll');
     });
 
     $('.li-drop .drop-opener').on('click', function (e) {
@@ -114,7 +132,7 @@ $(function () {
     var swiper2 = new Swiper(".mn-slide", {
         slidesPerView: 3,
         spaceBetween: 30,
-        loop: true,
+        loop: false,
         speed: 1000,
         pagination: {
             el: ".swiper-pagination",
