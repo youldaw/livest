@@ -299,33 +299,44 @@ $(function () {
         const progressBar = $('.progress-fill');
         const progressText = $('.progress-text');
         const nextBtn = $('#next-btn');
-
+    
         function updateProgress() {
             const progress = ((currentStep) / (steps.length - 1)) * 100;
             progressBar.css('width', progress + '%');
             progressText.text(Math.round(progress) + '%');
         }
-
+    
         function showStep(index) {
             steps.removeClass('active');
             steps.eq(index).addClass('active');
-            nextBtn.addClass('disabled');
-
+            nextBtn.addClass('disabled'); // Har safar bosqich o'zgarganda tugmani blokirovka qilish
+    
             if (index === steps.length - 1) {
                 nextBtn.attr('href', 'diagnostics-result.html').html('Далее <img src="images/btn-arrow.png" alt="">');
             } else {
                 nextBtn.removeAttr('href').html('Далее <img src="images/btn-arrow.png" alt="">');
             }
+    
+            checkStepCompletion();
         }
-
-        function enableNextButton() {
-            nextBtn.removeClass('disabled');
+    
+        function checkStepCompletion() {
+            let currentStepEl = steps.eq(currentStep);
+            let allAnswered = currentStepEl.find('.question-group').toArray().every(group => 
+                $(group).find('input[type="radio"]:checked').length > 0
+            );
+    
+            if (allAnswered) {
+                nextBtn.removeClass('disabled');
+            } else {
+                nextBtn.addClass('disabled');
+            }
         }
-
+    
         $('input[type="radio"]').on('change', function () {
-            enableNextButton();
+            checkStepCompletion();
         });
-
+    
         nextBtn.click(function (e) {
             if (currentStep < steps.length - 1) {
                 e.preventDefault();
@@ -334,10 +345,11 @@ $(function () {
                 updateProgress();
             }
         });
-
+    
         showStep(currentStep);
         updateProgress();
     });
+    
 
 
     // about video
